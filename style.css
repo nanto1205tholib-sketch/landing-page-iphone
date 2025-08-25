@@ -3,39 +3,41 @@
     padding: 0;
     box-sizing: border-box;
 }
-.body{
-    font-family: "inter",sans-serif;
+
+body {
+    font-family: "inter" sans-serif;
     background-color: #f5f5f7;
     color: #1d1d1f;
     line-height: 1.6;
 }
-.container{
+
+.container {
     max-width: 1100px;
     margin: 0 auto;
     padding: 0 30px;
 }
-/* STYLING HEADEAR */
-.main-header{
-    background-color: rgba(red, green, blue, alpha);
-    backdrop-filter: blur(10px);
+
+/* styling header */
+.main-header {
+    background-color: rgba(255, 255, 255, 0.8);
     padding: 15px 0;
     position: sticky;
     top: 0;
     z-index: 10;
     border-bottom: 1px solid #ddd;
 }
-.main-header .container{
-display: flex;
-justify-content: space-between;
-align-items: center;
 
+.main-header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo{
     text-decoration: none;
     font-size: 24px;
-    font-weight: 600px;
-    color: #1d1d1f;
+    font-weight: 600;
+    color: black;
 }
 
 .main-nav ul{
@@ -43,31 +45,34 @@ align-items: center;
     gap: 30px;
     list-style: none;
     align-items: center;
-
 }
 
-.main-nav a {
-text-decoration: none;
-color: #1d1d1f;
-font-size: 16px;
-padding: 4px 16px;
-display: flex;
-align-items: center;
-justify-content: center;
+.main-nav a{
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    padding: 4px 16px;
+    font-weight: 600;
+    transition: color 0.3s ;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
+
 .main-nav a:hover{
-    color: blue;
-
+    color: skyblue;
 }
-/* STYLING BUTTON */
+
+/* STYLING BUTTONS */
 .btn{
     display: inline-block;
     padding: 10px 20px;
     border-radius: 20px;
     text-decoration: none;
     font-weight: 600px;
-    transition: transform; transform: 0.3s ease-in-out;background-color: 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out; background-color: 0.3s ease-in-out;
 }
+
 a.btn-nav{
     background-color: blue;
     color: white;
@@ -75,31 +80,48 @@ a.btn-nav{
     border-radius: 6px;
 }
 
-a.btn-nav:hover{
+a.btn-nav :hover{
     color: white;
-    background-color:#024388 ;
+    background-color: #004b96;
 }
 
 .btn-primary{
-    background-color: #024388;
+    background-color: blue;
     color: white;
     margin-right: 10px;
     transition: all 0.3s;
 }
+
 .btn-secondary{
     background-color: #ddd;
     color: #1d1d1f;
 }
+
+.btn-secondary :hover{
+    transform: scale(1.05);
+}
+
 .btn-primary :hover{
     transform: scale(1.05);
 }
-.btn-secondary :hover{
-     transform: scale(1.05);
+
+/* efek saat hover */
+.btn-primary:hover,
+.btn-secondary:hover {
+    transform: scale(1.05);
 }
-/* STYLING HEAD SECTION */
-.hero-section{
+
+/* efek saat tombol ditekan */
+.btn-primary:active,
+.btn-secondary:active {
+    transform: scale(0.95);
+    transition: transform 0.1s ease-in-out;
+}
+
+/* STYLING HERO SECTION */
+.hero-section {
     padding: 80px 0;
-    align-items: center;
+    text-align: center;
 }
 
 .hero-container{
@@ -107,6 +129,7 @@ a.btn-nav:hover{
     align-items: center;
     gap: 40px;
 }
+
 .hero-text{
     flex: 1;
     text-align: left;
@@ -128,9 +151,64 @@ a.btn-nav:hover{
     color: #6e6e73;
 }
 .hero-image{
-    flex: 1 6;
+    flex: 1;
 }
 .hero-image img{
     width: 100%;
     height: auto;
+}
+
+/* STYLING FEATURES SECTION */
+.features-section{
+    background-color: white;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.section-title{
+    font-size: 48px;
+    font-weight: 600;
+    margin-bottom: 60px;
+}
+
+.features-grid{
+    display: flex;
+    gap: 30px;
+}
+
+.features-card{
+    background-color: #f5f5f7;
+    padding: 40px;
+    border-radius: 20px;
+    flex: 1; /*membuat ketiga kartu memiliki lebar yang sama  */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.features-card:hover{
+    transform: translate(-10px);
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.1);
+}
+
+.features-icon{
+    height: 60px;
+    margin-bottom: 20px;
+}
+
+.features-card h3{
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.features-card p{
+    font-family: 16px;
+    color: #6e6e73;
+}
+
+/* STYLING FOOTER */
+.main-footer{
+    padding: 40px 0;
+    text-align: center;
+    font-size: 14px;
+    color: #6e6e73;
 }
